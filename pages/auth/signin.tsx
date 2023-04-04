@@ -1,3 +1,4 @@
+import Loading from '@/components/Loading'
 import { signIn, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -53,7 +54,7 @@ function SignIn() {
   }
 
   if (loading) {
-    return <div>Loading...</div>
+    return <Loading />
   }
 
   return (

@@ -1,30 +1,22 @@
 import axios from 'axios';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Chat from './Chat';
 import GroupUsers from './GroupUsers';
 import { useGetGroupsByUser } from '@/hooks/useGetGroupsByUser';
-import { useMutation } from '@tanstack/react-query';
-import { useChatAdd } from '@/hooks/useChatAdd';
 import { CiEdit } from 'react-icons/ci';
+import { BiGroup } from 'react-icons/bi';
 import { useSession } from 'next-auth/react';
+import Loading from './Loading';
 
 function GroupsMember() {
   const session: any = useSession()
   const [groupUsers, setGroupUser] = useState("")
   const [groupName, setGroupName] = useState("")
   const [groupId, setGroupId] = useState("")
-  const [newGroupName, setNewGroupName] = useState("")
 
-
-  const [reload, setReload] = useState(false)
-
-  useEffect(() => {
-
-  }, [reload])
 
   const { isLoading, isError, error, data, isFetching }: any = useGetGroupsByUser()
-
 
   // console.log({ isLoading, isError, error, data, isFetching })
 
@@ -56,33 +48,33 @@ function GroupsMember() {
     setGroupUser(res1.data.data.group_user)
   }
 
+ 
 
-
-  if (isLoading || session.status === 'loading') return <div>"Loading..."</div>
+  if (isLoading || session.status === 'loading') return <Loading />
 
   if (isError) return <div>Error: {error.message}</div>
 
   return (
-    <div className='grid grid-cols-3 p-4 gap-2 min-h-[300px] '>
-      <div className="bg-slate-100 rounded-lg shadow-md p-4">
-        <div className="flex justify-between">
+    <div className='grid grid-cols-3 gap-2 min-h-[300px] '>
+
+      {/* Column-1 starts */}
+      <div className="bg-slate-100 rounded-lg shadow-md">
+        <div className="flex justify-between bg-blue-500 text-center p-2 rounded-t-lg text-white">
           <h2 className='text-lg font-bold'>My Groups</h2>
           {
             session.data?.user.role === 'administration' ?
-              <Link className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent text-sm rounded' href="/all-groups"><CiEdit/></Link>
+              <Link className=' hover:bg-blue-500  font-semibold text-white py-1 px-1 border border-white hover:border-transparent text-sm rounded' href="/all-groups"><CiEdit /></Link>
               :
               null
           }
         </div>
-        <div className="flex justify-between">
-          <div className='mt-3'>
+        <div className="flex justify-between p-2">
+          <div>
             {
               data.length ?
                 data.map((group: { name: string, id: string | number }) => (
-                  <div key={group.id} className="bg-slate-200 rounded  mt-1">
-                    <li className='p-3 cursor-pointer mb-2 hover:bg-slate-300' onClick={(e) => getGroupDetails(group, e)}>
-                      {group.name}
-                    </li>
+                  <div key={group.id} className='p-3 w-auto cursor-pointer bg-slate-200 rounded mb-2 hover:bg-slate-300 font-medium flex items-center' onClick={(e) => getGroupDetails(group, e)}>
+                    <BiGroup /> <span className='ml-3'>{group.name}</span>
                   </div>
                 ))
                 :
@@ -90,22 +82,36 @@ function GroupsMember() {
             }
           </div>
         </div>
+
       </div>
-      <div className="bg-slate-100 rounded-lg shadow-md p-4">
-        <h2 className='text-lg font-bold'>Group Users</h2>
-        {
-          groupUsers ?
-            <GroupUsers groupName={groupName} groupUsers={groupUsers} />
-            :
-            <div className="">
-              Click on the group to see users
-            </div>
-        }
+      {/* Column-1 ends */}
+
+
+      {/* Column-2 starts */}
+      <div className="bg-slate-100 rounded-lg shadow-md">
+        <h2 className='text-lg font-bold bg-blue-500 text-center p-2 rounded-t-lg text-white'>Group Users</h2>
+        <div className="p-2">
+          {
+            groupUsers ?
+              <GroupUsers groupName={groupName} groupUsers={groupUsers} />
+              :
+              <div className="font-semibold text-center">
+                Click on the group to see users
+              </div>
+          }
+        </div>
       </div>
-      <div className="bg-slate-100 rounded-lg shadow-md p-4 ">
-        <h2 className='text-lg font-bold'>Chats</h2>
-        <Chat groupId={groupId} />
+      {/* Column-2 ends */}
+
+
+      {/* Column-3 starts */}
+      <div className="bg-slate-100 rounded-lg shadow-md">
+        <h2 className='text-lg font-bold bg-blue-500 text-center p-2 rounded-t-lg text-white'>Chats</h2>
+        <div className="p-2">
+          <Chat groupId={groupId} />
+        </div>
       </div>
+      {/* Column-2 ends */}
 
     </div>
   )

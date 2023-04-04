@@ -20,13 +20,13 @@ export const useGetGroupByOwner = (groupId: any) => {
         }
       }
     }    
-        `,
+    `,
     "variables": {
       "id": groupId
     }
   };
   return useQuery({
-    queryKey: ['group'],
+    queryKey: ['group', groupId],
     queryFn: () =>
       axios({
         data: graphqlQuery
@@ -34,7 +34,7 @@ export const useGetGroupByOwner = (groupId: any) => {
         .then(res => {
           return res.data.data.group_by_pk
         }),
-        // enabled: groupId ? true : false
+        enabled: !!groupId
     // refetchOnWindowFocus: false,
     // staleTime: 2000,
     // cacheTime: 5000, //It is used for caching data for specific minutes

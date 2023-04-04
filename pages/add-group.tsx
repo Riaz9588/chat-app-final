@@ -49,8 +49,6 @@ function AddGroup() {
                 setNewGroupUsers(filterUser)
             }
         }
-
-
     }
 
 
@@ -96,10 +94,10 @@ function AddGroup() {
 
 
     return (
-        <div className='m-4 shadow-lg p-4'>
+        <div className='shadow-lg p-4'>
             <h3 className='text-xl font-bold my-2'>Create new group</h3>
             <input className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' onChange={(e: any) => setNewGroupName(e.target.value)} type="text" placeholder='Enter group name' /> <br />
-            <select className='my-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={(e) => setGroupUserHandler((e.target.value), "add")}>
+            <select className='mt-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={(e) => setGroupUserHandler((e.target.value), "add")}>
                 <option>Select group members</option>
 
                 {
@@ -111,7 +109,7 @@ function AddGroup() {
             <div>
                 {
                     newGroupUsers.map((user: any) => (
-                        <button key={user.id} disabled className="relative py-1 pl-4 pr-8 shadow-md no-underline rounded-full bg-gray-300 text-white font-sans font-semibold text-sm border-red  hover:text-white focus:outline-none active:shadow-none">
+                        <button key={user.id} disabled className="relative m-1 py-1 pl-4 pr-8 shadow-md no-underline rounded-full bg-gray-300 text-white font-sans font-semibold text-sm border-red  hover:text-white focus:outline-none active:shadow-none">
                             {user.name} - {user.role}
                             <AiOutlineCloseCircle onClick={() => setGroupUserHandler(JSON.stringify(user), "remove")} className='absolute right-3 top-2 cursor-pointer hover:bg-red-600 rounded-full' />
                         </button>
@@ -120,7 +118,7 @@ function AddGroup() {
                 }
             </div>
 
-            <button className='mt-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-1 border border-blue-500 hover:border-transparent text-sm rounded' onClick={createGroupHandler}>Create group</button>
+            <button className='mt-4 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-4 border border-blue-500 hover:border-transparent text-sm rounded' onClick={createGroupHandler}>Create group</button>
         </div>
     )
 }

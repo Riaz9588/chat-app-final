@@ -12,7 +12,6 @@ const setAxios = async (token: string | null) => {
         axios.defaults.headers.common['Authorization'] = null
         // axios.defaults.headers.common['x-hasura-unauthorized-role'] = 'public'
         // axios.defaults.headers.common['x-hasura-admin-secret'] = process.env.hasuraAdminSecret
-
     }
 }
 

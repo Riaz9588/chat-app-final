@@ -7,7 +7,7 @@ export const useGetGroupsByOwner = () => {
     const graphqlQuery = {
         "operationName": "MyQuery",
         "query": `query MyQuery {
-            group {
+            group(order_by: {created_at: desc}) {
               id
               name
             }

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useGetGroupByOwner } from '@/hooks/useGetGroupByOwner'
 import axios from 'axios'
 import { useUserInfo } from '@/hooks/useUserInfo'
+import Loading from '@/components/Loading'
 
 
 function EditUser() {
@@ -60,7 +61,7 @@ function EditUser() {
         }
     }, [data])
 
-    if (isLoading) return <div>"Loading..."</div>
+    if (isLoading) return <Loading />
 
     if (isError) return <div>Error: {error.message}</div>
 
