@@ -4,7 +4,7 @@ import { signIn, signOut } from 'next-auth/react'
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between mx-10">
+        <nav className="flex justify-between">
             <h3 className='text-xl font-extrabold'>Company Communication</h3>
             <ul className='flex justify-around'>
                 <Link href='/' className='ml-3'><li>Home</li></Link>

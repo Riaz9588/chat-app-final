@@ -48,7 +48,7 @@ function GroupsMember() {
     setGroupUser(res1.data.data.group_user)
   }
 
- 
+
 
   if (isLoading || session.status === 'loading') return <Loading />
 
@@ -69,18 +69,22 @@ function GroupsMember() {
           }
         </div>
         <div className="flex justify-between p-2">
-          <div>
+          <div className='w-full'>
             {
               data.length ?
-                data.map((group: { name: string, id: string | number }) => (
-                  <div key={group.id} className='p-3 w-auto cursor-pointer bg-slate-200 rounded mb-2 hover:bg-slate-300 font-medium flex items-center' onClick={(e) => getGroupDetails(group, e)}>
-                    <BiGroup /> <span className='ml-3'>{group.name}</span>
+                data.map((group: { name: string, id: string | number, created_at: string }) => (
+                  <div onClick={(e) => getGroupDetails(group, e)} key={group.id} className='p-3 cursor-pointer bg-slate-200 rounded mb-2 hover:bg-slate-300 font-medium flex justify-between items-center'>
+                    <div className=' flex items-center'>
+                      <BiGroup /> <span className='ml-3'>{group.name}</span>
+                    </div>
+                    <div className='text-xs'>{new Date(group.created_at).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', day: '2-digit', year: 'numeric' })}</div>
                   </div>
                 ))
                 :
                 <p>No groups created yet!</p>
             }
           </div>
+
         </div>
 
       </div>

@@ -1,13 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import LoginButton from '@/components/LoginBtn'
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession } from "next-auth/react"
 
-import axios from 'axios'
-import setAxios from '@/utils/setAxios'
-import { useUserLogin } from '@/hooks/useUserLogin'
-import { useRouter } from 'next/router'
-// console.log(process.env.apiUrl)
 
 export default function Home() {
 

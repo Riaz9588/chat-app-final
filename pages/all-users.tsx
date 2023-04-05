@@ -1,25 +1,33 @@
+import Loading from '@/components/Loading'
+import { useDeleteUser } from '@/hooks/useDeleteUser'
 import { useGetUsers } from '@/hooks/useGetUsers'
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import React from 'react'
 
 function AllUsers() {
 
+  const session: any = useSession()
+
+console.log(session)
   const { isLoading, isError, error, data, isFetching }: any = useGetUsers()
+ 
+  const { isLoading: deleteUserDataLoading, isSuccess, error: deleteUserDataError, data: deleteUserData, mutate }: any = useDeleteUser()
 
   const deleteUser = (id: string | number) => {
-    alert(id)
+    mutate(id)
   }
 
-  if (isLoading) return <div>"Loading..."</div>
+  if (isLoading || session.status === 'loading' || deleteUserDataLoading) return <Loading/>
 
   if (isError) return <div>Error: {error.message}</div>
-  console.log(data)
+
   return (
-    <div className='m-4'>
-      <h3 className='text-xl font-bold my-2'>All Users</h3>
-      <div className="p-4">
-        <table className="w-full text-left shadow rounded-md">
-          <thead className='bg-blue-400'>
+    <div className=''>
+      <h3 className='text-xl font-bold '>All Users</h3>
+      <div className="">
+        <table className="text-left shadow rounded-md table-fixed w-full font-medium">
+          <thead>
             <tr >
               <th>ID</th>
               <th>Name</th>
@@ -34,7 +42,7 @@ function AllUsers() {
               data.map((user: any) => (
                 <tr key={user.id} className="odd:bg-slate-300">
                   <td>{user.id}</td>
-                  <td>{user.name}</td>
+                  <td>{session.data.user.name === user.name ? <span className='text-white font-bold bg-slate-500 px-2 py-1 rounded-full'>{user.name} - (Signed-in)</span> : user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.role}</td>
                   {

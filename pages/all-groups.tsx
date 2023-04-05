@@ -8,69 +8,9 @@ import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 import { BiGroup } from 'react-icons/bi'
 
 function AllGroups() {
-    const session: any = useSession()
 
 
     const { isLoading, isError, error, data, isFetching }: any = useGetGroupsByOwner()
-
-    const [groupUsers, setGroupUser] = useState(null)
-    const [groupChats, setGroupChats] = useState(null)
-    const [groupName, setGroupName] = useState(null)
-    const [newGroupName, setNewGroupName] = useState(null)
-
-    const getGroupDetails = async (group: any, e: any) => {
-
-        // setGroupName(group.name)
-
-        // const graphqlQuery1 = {
-        //     "operationName": "MyQuery",
-        //     "query": `query MyQuery($_eq: Int = "") {
-        //     group_user(where: {group_id: {_eq: $_eq}}) {
-        //       user {
-        //         name
-        //         email
-        //         id
-        //         role
-        //       }
-        //     }
-        //   }
-        //   `,
-        //     "variables": {
-        //         "_eq": group.id
-        //     }
-        // }
-        // const res1 = await axios({
-        //     data: graphqlQuery1
-        // })
-        // setGroupUser(res1.data.data.group_user)
-
-
-
-
-        // const graphqlQuery2 = {
-        //     "operationName": "MyQuery",
-        //     "query": `query MyQuery($_eq: Int = "") {
-        //     chat(where: {group_id: {_eq: $_eq}}) {
-        //       id
-        //       message
-        //       user {
-        //         name
-        //       }
-        //     }
-        //   }
-        //   `,
-        //     "variables": {
-        //         "_eq": group.id
-        //     }
-        // }
-        // const res2 = await axios({
-        //     data: graphqlQuery2
-        // })
-        // setGroupChats(res2.data.data.chat)
-
-    }
-
-
 
     const deleteGroupHandler = async (groupId: string) => {
         const graphqlQuery2 = {

@@ -55,7 +55,7 @@ function Chat({ groupId }: any) {
     return <div className="h-96 font-semibold text-center">Click on the group to see chats</div>
   }
   if (isError || getChatsError) return <div className="h-96 font-semibold text-center">Error: "Something went wrong!"</div>
-
+console.log(getChatsData)
   return (
     <div>
       <div className='h-96 overflow-y-auto py-2 scrollbar-hide' ref={chatContainerRef}>
@@ -64,11 +64,11 @@ function Chat({ groupId }: any) {
             getChatsData.map((chat: any) => (
               chat.user.name === session.data.user.name ?
                 <li key={chat.id} className='flex justify-end'>
-                  <span className='text-right bg-blue-500 rounded-lg mt-1 text-white py-1 px-2'><span className='font-medium'>{chat.user.name}</span>: {chat.message}</span>
+                  <span className='text-right bg-blue-500 rounded-lg mt-1 text-white py-1 px-2'><span className='font-bold'>{chat.user.name}</span>: {chat.message}<sub className='text-[10px] ml-1'>{new Date(chat.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</sub></span>
                 </li>
                 :
-                <li key={chat.id} className='my-2'>
-                  <span className='text-left bg-slate-500 rounded-lg mt-1 text-white py-1 px-2'><span className='font-medium'>{chat.user.name}</span>: {chat.message}</span>
+                <li key={chat.id} className='flex justify-start'>
+                  <span className='text-left bg-slate-500 rounded-lg mt-1 text-white py-1 px-2'><span className='font-bold'>{chat.user.name}</span>: {chat.message}<sub className='text-[10px] ml-1'>{new Date(chat.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</sub></span>
                 </li>
             ))
             :

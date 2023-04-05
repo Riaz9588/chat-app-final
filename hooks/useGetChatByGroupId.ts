@@ -9,6 +9,7 @@ export const useGetChatByGroupId= (groupId: any) => {
             chat(where: {group_id: {_eq: $_eq}}) {
               id
               message
+              created_at
               user {
                 name
               }

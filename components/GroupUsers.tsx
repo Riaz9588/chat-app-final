@@ -1,13 +1,8 @@
-import { useUserAdd } from '@/hooks/useUserAdd'
-import { useMutation } from '@tanstack/react-query'
-import axios from 'axios'
 import React, { useState } from 'react'
 
 function GroupUsers({ groupName, groupUsers }: any) {
 
-
   const [enabled, setEnabled] = useState(false)
-
 
 
 
@@ -31,9 +26,12 @@ function GroupUsers({ groupName, groupUsers }: any) {
           <ul className='shadow-md p-2'>
             {
               groupUsers.map((user: any) => (
-                <div key={user.user.id} className="flex justify-between text-left mt-1">
-                  <span className='font-bold'>{user.user.name}</span>
-                  <span>{user.user.role}</span>
+                <div key={user.user.id}>
+                  <div className="flex justify-between text-left mt-1">
+                    <span className='font-semibold'>{user.user.name}</span>
+                    <span>{user.user.role}</span>
+                  </div>
+                  <hr className='h-1 w-full' />
                 </div>
               ))
             }
