@@ -9,7 +9,6 @@ function AllUsers() {
 
   const session: any = useSession()
 
-console.log(session)
   const { isLoading, isError, error, data, isFetching }: any = useGetUsers()
  
   const { isLoading: deleteUserDataLoading, isSuccess, error: deleteUserDataError, data: deleteUserData, mutate }: any = useDeleteUser()
@@ -25,7 +24,7 @@ console.log(session)
   return (
     <div className=''>
       <h3 className='text-xl font-bold '>All Users</h3>
-      <div className="">
+      <div className="overflow-scroll">
         <table className="text-left shadow rounded-md table-fixed w-full font-medium">
           <thead>
             <tr >
@@ -40,9 +39,9 @@ console.log(session)
           <tbody>
             {
               data.map((user: any) => (
-                <tr key={user.id} className="odd:bg-slate-300">
+                <tr key={user.id} className="odd:bg-slate-100">
                   <td>{user.id}</td>
-                  <td>{session.data.user.name === user.name ? <span className='text-white font-bold bg-slate-500 px-2 py-1 rounded-full'>{user.name} - (Signed-in)</span> : user.name}</td>
+                  <td>{session.data.user.name === user.name ? <span className='text-white font-bold bg-slate-400 px-2 py-1 rounded-full'>{user.name} - (Signed-in)</span> : user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.role}</td>
                   {

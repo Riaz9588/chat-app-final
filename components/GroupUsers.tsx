@@ -1,4 +1,7 @@
+import Image from 'next/image'
 import React, { useState } from 'react'
+import noDataImage from '@/public/noData.png'
+
 
 function GroupUsers({ groupName, groupUsers }: any) {
 
@@ -19,8 +22,14 @@ function GroupUsers({ groupName, groupUsers }: any) {
       <h3 className="flex justify-between text-lg font-medium">{groupName}</h3>
       {
         groupUsers.length === 0 ?
-          <div className="">
-            <p>No user added yet!</p>
+          <div className="font-semibold text-center grid justify-center items-center">
+            <Image
+              src={noDataImage}
+              alt="Empty group"
+              width={250}
+              height={250}
+            />
+            <p className="font-semibold text-center">No user added yet! <br /> Please add user from edit group</p>
           </div>
           :
           <ul className='shadow-md p-2'>

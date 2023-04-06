@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
-
-export const useGetGroupsByUser= () => {
+export const useGetGroupsByUser= (userRole: string) => {
     const graphqlQuery = {
         "operationName": "MyQuery",
         "query": `query MyQuery {
@@ -22,7 +21,7 @@ export const useGetGroupsByUser= () => {
         queryKey: ['groups'],
         queryFn: () =>
             axios({
-                data: graphqlQuery
+                data:  graphqlQuery
             })
                 .then(res => {
                     return res.data.data.group
@@ -32,5 +31,4 @@ export const useGetGroupsByUser= () => {
         // staleTime: 2000,
         // cacheTime: 5000, //It is used for caching data for specific minutes
     })
-    
 }

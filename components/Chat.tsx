@@ -7,6 +7,8 @@ import { BsSendFill } from 'react-icons/bs'
 import Loading from './Loading'
 import Image from 'next/image'
 import chatImage from '@/public/chat.png'
+import chatQueryImage from '@/public/chatQuery.png'
+
 
 
 function Chat({ groupId }: any) {
@@ -15,7 +17,7 @@ function Chat({ groupId }: any) {
 
   const [message, setMessage] = useState("")
 
-  const chatContainerRef = useRef(null)
+  const chatContainerRef: any = useRef(null)
 
   const { isLoading, isError, isSuccess, data, error, mutate } = useChatAdd()
 
@@ -51,11 +53,22 @@ function Chat({ groupId }: any) {
     if (getChatsLoading) return <Loading />
   }
 
-  if (!getChatsData) {
-    return <div className="h-96 font-semibold text-center">Click on the group to see chats</div>
-  }
   if (isError || getChatsError) return <div className="h-96 font-semibold text-center">Error: "Something went wrong!"</div>
-console.log(getChatsData)
+
+  if (!getChatsData) {
+    return (
+    <div className="h-96 font-semibold text-center flex flex-col justify-center items-center">
+      <Image
+        src={chatQueryImage}
+        alt="click on the group to see chat"
+        width={250}
+        height={250}
+      />
+      <p className="font-semibold text-center">Click on the group to see chat!</p>
+    </div>
+    )
+  }
+
   return (
     <div>
       <div className='h-96 overflow-y-auto py-2 scrollbar-hide' ref={chatContainerRef}>
@@ -72,12 +85,12 @@ console.log(getChatsData)
                 </li>
             ))
             :
-            <div className="h-96 font-semibold text-center grid justify-center items-center">
-                <Image
-                  src={chatImage}
-                  alt="Emty chat"
-                  width={250}
-                  height={250}
+            <div className="h-96 font-semibold text-center flex flex-col justify-center items-center">
+              <Image
+                src={chatImage}
+                alt="Empty chat"
+                width={250}
+                height={250}
               />
               <p>No chats created yet!</p>
             </div>
