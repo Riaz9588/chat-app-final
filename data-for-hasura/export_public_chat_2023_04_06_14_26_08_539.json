@@ -1,0 +1,402 @@
+[
+  {
+    "group_id": 1,
+    "id": 4,
+    "user_id": 1,
+    "message": "Hello this first chat! - 1",
+    "created_at": "2023-03-21T06:51:10.011372+00:00",
+    "updated_at": "2023-03-21T06:51:10.011372+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 5,
+    "user_id": 2,
+    "message": "Hello this first chat! - 2",
+    "created_at": "2023-03-21T06:51:18.481758+00:00",
+    "updated_at": "2023-03-21T06:51:18.481758+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 6,
+    "user_id": 1,
+    "message": "Hello this first chat! - 2",
+    "created_at": "2023-03-21T06:51:29.184364+00:00",
+    "updated_at": "2023-03-21T06:51:29.184364+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 7,
+    "user_id": 1,
+    "message": "Hello this first chat! - 3",
+    "created_at": "2023-03-21T06:51:33.333578+00:00",
+    "updated_at": "2023-03-21T06:51:33.333578+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 8,
+    "user_id": 2,
+    "message": "hello! this is john",
+    "created_at": "2023-03-28T05:45:46.861199+00:00",
+    "updated_at": "2023-03-28T05:45:46.861199+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 9,
+    "user_id": 1,
+    "message": "hello! this is Riaz again",
+    "created_at": "2023-03-28T05:46:14.662169+00:00",
+    "updated_at": "2023-03-28T05:46:14.662169+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 21,
+    "user_id": 1,
+    "message": "THis is RIaz",
+    "created_at": "2023-03-29T08:44:23.349397+00:00",
+    "updated_at": "2023-03-29T08:44:23.349397+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 22,
+    "user_id": 1,
+    "message": "This is new message",
+    "created_at": "2023-03-29T09:15:40.465945+00:00",
+    "updated_at": "2023-03-29T09:15:40.465945+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 23,
+    "user_id": 1,
+    "message": "Hello new message",
+    "created_at": "2023-03-30T04:07:49.800515+00:00",
+    "updated_at": "2023-03-30T04:07:49.800515+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 24,
+    "user_id": 1,
+    "message": "asdasd",
+    "created_at": "2023-03-30T08:27:43.923765+00:00",
+    "updated_at": "2023-03-30T08:27:43.923765+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 25,
+    "user_id": 1,
+    "message": "New message from Riaz",
+    "created_at": "2023-04-03T04:18:32.435613+00:00",
+    "updated_at": "2023-04-03T04:18:32.435613+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 26,
+    "user_id": 2,
+    "message": "Hello this is new message from john.",
+    "created_at": "2023-04-03T05:08:21.44076+00:00",
+    "updated_at": "2023-04-03T05:08:21.44076+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 27,
+    "user_id": 2,
+    "message": "new message",
+    "created_at": "2023-04-03T05:27:35.979335+00:00",
+    "updated_at": "2023-04-03T05:27:35.979335+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 28,
+    "user_id": 2,
+    "message": "Hello from group 1",
+    "created_at": "2023-04-03T06:42:22.463632+00:00",
+    "updated_at": "2023-04-03T06:42:22.463632+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 29,
+    "user_id": 2,
+    "message": "Hello from group 1 - 2",
+    "created_at": "2023-04-03T06:43:08.108794+00:00",
+    "updated_at": "2023-04-03T06:43:08.108794+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 30,
+    "user_id": 2,
+    "message": "Hello from group 1 - 3",
+    "created_at": "2023-04-03T06:44:32.9924+00:00",
+    "updated_at": "2023-04-03T06:44:32.9924+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 31,
+    "user_id": 2,
+    "message": "asdsadas",
+    "created_at": "2023-04-03T06:46:02.449417+00:00",
+    "updated_at": "2023-04-03T06:46:02.449417+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 32,
+    "user_id": 2,
+    "message": "Good!",
+    "created_at": "2023-04-03T06:52:39.457829+00:00",
+    "updated_at": "2023-04-03T06:52:39.457829+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 33,
+    "user_id": 2,
+    "message": "kl",
+    "created_at": "2023-04-03T07:00:42.927262+00:00",
+    "updated_at": "2023-04-03T07:00:42.927262+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 34,
+    "user_id": 2,
+    "message": "Hello!",
+    "created_at": "2023-04-03T08:04:54.618803+00:00",
+    "updated_at": "2023-04-03T08:04:54.618803+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 35,
+    "user_id": 2,
+    "message": "new ",
+    "created_at": "2023-04-03T08:10:24.680351+00:00",
+    "updated_at": "2023-04-03T08:10:24.680351+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 36,
+    "user_id": 1,
+    "message": "Hello!",
+    "created_at": "2023-04-03T08:40:05.969249+00:00",
+    "updated_at": "2023-04-03T08:40:05.969249+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 37,
+    "user_id": 1,
+    "message": "Good job!",
+    "created_at": "2023-04-03T08:41:20.991716+00:00",
+    "updated_at": "2023-04-03T08:41:20.991716+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 38,
+    "user_id": 1,
+    "message": "Good job! Again Riaz",
+    "created_at": "2023-04-03T08:42:31.087478+00:00",
+    "updated_at": "2023-04-03T08:42:31.087478+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 39,
+    "user_id": 1,
+    "message": "Hello Again!",
+    "created_at": "2023-04-03T08:44:59.613802+00:00",
+    "updated_at": "2023-04-03T08:44:59.613802+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 40,
+    "user_id": 2,
+    "message": "Hey! this is John Doe!",
+    "created_at": "2023-04-03T08:46:05.18862+00:00",
+    "updated_at": "2023-04-03T08:46:05.18862+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 41,
+    "user_id": 1,
+    "message": "Hello",
+    "created_at": "2023-04-03T09:05:10.715722+00:00",
+    "updated_at": "2023-04-03T09:05:10.715722+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 42,
+    "user_id": 1,
+    "message": "Test",
+    "created_at": "2023-04-03T09:11:10.116299+00:00",
+    "updated_at": "2023-04-03T09:11:10.116299+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 44,
+    "user_id": 2,
+    "message": "Hey there!",
+    "created_at": "2023-04-03T09:35:59.455513+00:00",
+    "updated_at": "2023-04-03T09:35:59.455513+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 45,
+    "user_id": 1,
+    "message": "Hello!",
+    "created_at": "2023-04-03T09:48:57.357824+00:00",
+    "updated_at": "2023-04-03T09:48:57.357824+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 46,
+    "user_id": 2,
+    "message": "This is john!",
+    "created_at": "2023-04-03T09:50:20.941507+00:00",
+    "updated_at": "2023-04-03T09:50:20.941507+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 52,
+    "user_id": 1,
+    "message": "Nice!",
+    "created_at": "2023-04-04T04:35:27.854991+00:00",
+    "updated_at": "2023-04-04T04:35:27.854991+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 53,
+    "user_id": 1,
+    "message": "Good job!",
+    "created_at": "2023-04-04T04:36:49.795749+00:00",
+    "updated_at": "2023-04-04T04:36:49.795749+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 54,
+    "user_id": 1,
+    "message": "Almost done the Scrollbar!",
+    "created_at": "2023-04-04T04:45:16.851214+00:00",
+    "updated_at": "2023-04-04T04:45:16.851214+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 55,
+    "user_id": 1,
+    "message": "Hello!",
+    "created_at": "2023-04-04T04:46:19.71715+00:00",
+    "updated_at": "2023-04-04T04:46:19.71715+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 56,
+    "user_id": 1,
+    "message": "Done!",
+    "created_at": "2023-04-04T04:53:37.276365+00:00",
+    "updated_at": "2023-04-04T04:53:37.276365+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 57,
+    "user_id": 1,
+    "message": "Hello! Done The scroll bar problem!",
+    "created_at": "2023-04-04T04:58:30.150551+00:00",
+    "updated_at": "2023-04-04T04:58:30.150551+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 58,
+    "user_id": 1,
+    "message": "Hello! Done The scroll bar problem!",
+    "created_at": "2023-04-04T04:59:14.240053+00:00",
+    "updated_at": "2023-04-04T04:59:14.240053+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 59,
+    "user_id": 1,
+    "message": "Good!",
+    "created_at": "2023-04-04T04:59:39.810683+00:00",
+    "updated_at": "2023-04-04T04:59:39.810683+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 60,
+    "user_id": 1,
+    "message": "Hi!",
+    "created_at": "2023-04-04T05:01:09.853166+00:00",
+    "updated_at": "2023-04-04T05:01:09.853166+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 61,
+    "user_id": 2,
+    "message": "Hello! John Again!",
+    "created_at": "2023-04-04T05:11:16.691935+00:00",
+    "updated_at": "2023-04-04T05:11:16.691935+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 62,
+    "user_id": 2,
+    "message": "Hello!",
+    "created_at": "2023-04-04T05:11:29.489016+00:00",
+    "updated_at": "2023-04-04T05:11:29.489016+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 63,
+    "user_id": 1,
+    "message": "Hey!",
+    "created_at": "2023-04-04T08:16:53.474739+00:00",
+    "updated_at": "2023-04-04T08:16:53.474739+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 64,
+    "user_id": 1,
+    "message": "Hello !",
+    "created_at": "2023-04-04T09:59:53.3313+00:00",
+    "updated_at": "2023-04-04T09:59:53.3313+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 65,
+    "user_id": 1,
+    "message": "Hey! This is new message!",
+    "created_at": "2023-04-04T13:12:51.657311+00:00",
+    "updated_at": "2023-04-04T13:12:51.657311+00:00"
+  },
+  {
+    "group_id": 106,
+    "id": 66,
+    "user_id": 1,
+    "message": "This is Riaz",
+    "created_at": "2023-04-04T13:16:37.682064+00:00",
+    "updated_at": "2023-04-04T13:16:37.682064+00:00"
+  },
+  {
+    "group_id": 106,
+    "id": 67,
+    "user_id": 2,
+    "message": "This is Doe!",
+    "created_at": "2023-04-04T13:19:10.968318+00:00",
+    "updated_at": "2023-04-04T13:19:10.968318+00:00"
+  },
+  {
+    "group_id": 1,
+    "id": 68,
+    "user_id": 2,
+    "message": "lol",
+    "created_at": "2023-04-05T06:55:21.903597+00:00",
+    "updated_at": "2023-04-05T06:55:21.903597+00:00"
+  },
+  {
+    "group_id": 2,
+    "id": 69,
+    "user_id": 1,
+    "message": "Hello! I want to know more about netxjs, hasura and tailwind css! Can you help me to gain this knowledge?",
+    "created_at": "2023-04-05T07:51:09.78105+00:00",
+    "updated_at": "2023-04-05T07:51:09.78105+00:00"
+  },
+  {
+    "group_id": 106,
+    "id": 76,
+    "user_id": 1,
+    "message": "Hello!",
+    "created_at": "2023-04-06T06:14:39.752825+00:00",
+    "updated_at": "2023-04-06T06:14:39.752825+00:00"
+  }
+]
